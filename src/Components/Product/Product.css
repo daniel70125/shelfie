@@ -1,0 +1,16 @@
+.img {
+    float:left;
+}
+.item-box {
+    background-color: #D34735;
+    margin:20px 5px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.item-box > span, h5 {
+    font-size:20px;
+    text-decoration: underline;
+}
+.item-box img {
+    margin-right: 10px;
+}

@@ -1,0 +1,47 @@
+#input-container {
+    background-color: beige;
+    padding:10px;
+    background-color: beige;
+    padding: 10px;
+    position: fixed;
+    width: 400px;
+    right: 40px;
+    border-radius: 10px;
+    top: 150px;
+}
+#input-container > input {
+    width:100%;
+}
+img {
+    width: 70%;
+    height: 194px;
+    margin:auto;
+    margin-left: 25px;
+}
+p {
+    font-size: 20px;
+}
+.btn {
+    padding: 10px;
+    margin: 5px 10px;
+    background-color: #ed6b5a;
+    border-radius: 7px;
+    border: none;
+    font-family: Open Sans,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.btn2 {
+    padding: 10px;
+    margin: 5px 10px;
+    background-color: #ed6b5a;
+    border-radius: 7px;
+    border: none;
+    font-family: Open Sans,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    left: 90px;
+    margin-top: 40px;
+}

@@ -1,0 +1,8 @@
+#item-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left:15px;
+    width:475px;
+    align-items: center;
+}
