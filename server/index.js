@@ -17,7 +17,8 @@ massive({
 )
 
 app.get('/api/inventory', ctrl.getAll);
-app.post('/api/inventory', ctrl.create);
+app.post(`/api/inventory`, ctrl.create);
+app.put('/api/inventory/:id', ctrl.update);
 
 
 

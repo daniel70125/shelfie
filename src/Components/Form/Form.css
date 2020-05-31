@@ -1,7 +1,6 @@
 #input-container {
-    background-color: beige;
+    background-color: #3AD886;
     padding:10px;
-    background-color: beige;
     padding: 10px;
     position: fixed;
     width: 400px;
@@ -12,7 +11,7 @@
 #input-container > input {
     width:100%;
 }
-img {
+.input-img {
     width: 70%;
     height: 194px;
     margin:auto;
@@ -42,6 +41,6 @@ p {
     font-weight: 700;
     font-size: 16px;
     position: relative;
-    left: 90px;
+    left: 145px;
     margin-top: 40px;
 }

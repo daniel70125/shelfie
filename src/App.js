@@ -10,25 +10,43 @@ class App extends Component {
     super();
 
     this.state = {
-      inventory: []
+      inventory: [],
+      isEdit: false,
+      id: ""
     }
 
-    this.componentDidMount = this.componentDidMount.bind(this);
+    this.getAll = this.getAll.bind(this);
+    this.changeId = this.changeId.bind(this);
+    this.changeEdit = this.changeEdit.bind(this);
   }
 
   componentDidMount(){
+    this.getAll()
+  }
+  changeId(e){
+    this.setState({
+      id: e
+    })
+  }
+
+  changeEdit(){
+    this.setState({
+      isEdit: !this.state.isEdit
+    })
+  }
+
+  getAll(){
     axios.get('/api/inventory')
     .then(res => this.setState({inventory: res.data}))
     .catch(err => console.log(err));
   }
-
   render(){
-    console.log(this.state.inventory);
+    console.log(this.state);
     return (
       <div className="App">
         <Header />
-        <Dashboard inventory={this.state.inventory}/>
-        <Form updatedList={this.componentDidMount}/>
+        <Dashboard id={this.changeId} edit={this.state.isEdit} changeEdit={this.changeEdit} inventory={this.state.inventory}/>
+        <Form id={this.state.id} edit={this.state.isEdit}  changeEdit={this.changeEdit} updatedList={this.getAll}/>
       </div>
     );
   }

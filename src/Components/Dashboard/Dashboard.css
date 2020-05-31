@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin-left:15px;
-    width:475px;
+    margin-left:40px;
+    width:50%;
     align-items: center;
 }

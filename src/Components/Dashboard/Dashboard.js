@@ -13,7 +13,7 @@ class Dashboard extends Component {
 
     render(){
         let items = this.props.inventory.map((elm, i) => {
-            return <Product key={i} inventory={elm} />
+            return <Product updateItem={this.props.updateItem} id={this.props.id} changeEdit={this.props.changeEdit} key={i} inventory={elm} />
         })
         return (
             <div id="item-container">

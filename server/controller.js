@@ -14,6 +14,14 @@ module.exports = {
         .then(() => res.status(200))
         .catch(err => console.log(err)
         )
-        
+    },
+    update: (req, res) => {
+        const db = req.app.get('db');
+        const {id} = req.params;
+        const {img, name, price} = req.body;
+
+        db.update_inventory([id, img, name, price])
+        .then(() => res.status(200))
+        .catch(err => console.log(err))
     }
 }
