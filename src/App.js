@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Dashboard id={this.changeId} edit={this.state.isEdit} changeEdit={this.changeEdit} inventory={this.state.inventory}/>
+        <Dashboard updatedList={this.getAll} id={this.changeId} edit={this.state.isEdit} changeEdit={this.changeEdit} inventory={this.state.inventory}/>
         <Form id={this.state.id} edit={this.state.isEdit}  changeEdit={this.changeEdit} updatedList={this.getAll}/>
       </div>
     );

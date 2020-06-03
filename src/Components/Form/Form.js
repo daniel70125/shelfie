@@ -67,11 +67,12 @@ class Form extends Component {
         axios.put(`api/inventory/${this.props.id}`, body)
         .then(res => {
             console.log("Works !!!")
+            this.props.updatedList();
         })
         .catch(err => console.log(err)
         )
         this.props.changeEdit()
-        this.props.updatedList();
+        // this.props.updatedList();
         this.reset();
     }
 

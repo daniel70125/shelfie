@@ -8,6 +8,11 @@ const {PORT, CONNECTION_STRING} = process.env;
 
 app.use(express.json());
 
+app.get('/api/inventory', ctrl.getAll);
+app.post(`/api/inventory`, ctrl.create);
+app.put('/api/inventory/:id', ctrl.update);
+app.delete('/api/inventory/:id', ctrl.delete);
+
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false}
@@ -15,11 +20,5 @@ massive({
  })
 .catch(err => console.log(err)
 )
-
-app.get('/api/inventory', ctrl.getAll);
-app.post(`/api/inventory`, ctrl.create);
-app.put('/api/inventory/:id', ctrl.update);
-
-
 
 app.listen(PORT, () => console.log(`Port is: ${PORT}`));
